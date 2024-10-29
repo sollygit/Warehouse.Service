@@ -52,5 +52,4 @@ My Code Remarks:
 - I have implemented a menu-based Console Application to demonstarte output of CSV files. 
 - CSV files located in a shared folder - App.config to configure location of CSV files.
 - Using Nuget packages like ChoETL to read/write CSV to JSON.
-- Should consider caching objects fetched for better perf. 
-- Added a few unit-test functions.
+- Should consider caching objects fetched for better perf.
