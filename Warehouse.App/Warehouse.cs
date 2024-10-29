@@ -5,9 +5,10 @@ namespace Warehouse.App
 {
     static class Warehouse
     {
+        static IWarehouseService warehouseService = Program.ServiceProvider.GetService<IWarehouseService>();
+
         public static async Task Products()
         {
-            var warehouseService = Program.ServiceProvider.GetService<IWarehouseService>();
             var products = await warehouseService.GetProducts();
 
             foreach (var p in products)
@@ -18,7 +19,6 @@ namespace Warehouse.App
 
         public static async Task RetailerProducts()
         {
-            var warehouseService = Program.ServiceProvider.GetService<IWarehouseService>();
             var retailerProducts = await warehouseService.GetRetailerProducts();
 
             foreach (var p in retailerProducts)
@@ -29,7 +29,6 @@ namespace Warehouse.App
 
         public static async Task OutputProducts()
         {
-            var warehouseService = Program.ServiceProvider.GetService<IWarehouseService>();
             var outputProducts = await warehouseService.GetOutputProducts();
 
             foreach (var p in outputProducts)
